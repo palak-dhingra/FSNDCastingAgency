@@ -8,6 +8,10 @@ def create_app(test_config=None):
   app = Flask(__name__)
   CORS(app)
 
+  @app.route('/coolkids')
+    def be_cool():
+        return "Be cool, man, be coooool! You're almost a FSND grad!"
+
   return app
 
 APP = create_app()
